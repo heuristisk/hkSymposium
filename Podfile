@@ -9,10 +9,23 @@ def common_pods
     pod 'Kingfisher', '~> 4.0'
 end
 
+workspace 'hkSymposium'
+
 target 'hkSymposium' do
+	xcodeproj 'hkSymposium.xcodeproj'
     common_pods
 end
 
+workspace 'hkSymposium'
+
 target 'hkSymposiumTests' do
+	xcodeproj 'hkSymposium.xcodeproj'
+    common_pods
+end
+
+workspace 'hkSymposium'
+
+target 'TMDbClient' do
+	xcodeproj 'TMDbClient/TMDbClient.xcodeproj'
     common_pods
 end

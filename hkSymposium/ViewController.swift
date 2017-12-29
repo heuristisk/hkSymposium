@@ -7,10 +7,21 @@
 //
 
 import UIKit
+import TMDbClient
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        MovieApi.shared.getGenres { (response) in
+
+            switch response {
+            case .error:
+                print("")
+            case .success(let dataSet):
+                print("")
+            }
+        }
     }
 }

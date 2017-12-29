@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TMDbClient/TMDbClient.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:hkSymposium.xcodeproj">
    </FileRef>
    <FileRef
