@@ -13,5 +13,5 @@ class Settings {
     static var apiKey = "9a74372440cacf0cd102b3521edbbd0c"
     static var apiUrl = "https://api.themoviedb.org/"
     static var apiVersion = "3"
-    static let apiLocale = "pt-BR"
+    static let apiLocale = "en-US"
 }

@@ -15,6 +15,7 @@
 		8B1570111FF705090030950D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1570101FF705090030950D /* Settings.swift */; };
 		8B1570141FF705480030950D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1570131FF705480030950D /* String.swift */; };
 		8B1570181FF70A960030950D /* UpComingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1570171FF70A960030950D /* UpComingResponse.swift */; };
+		8B15701A1FF70E3B0030950D /* UpComingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1570191FF70E3B0030950D /* UpComingDataModel.swift */; };
 		8B821E831FF6FF7600469E8E /* TMDbClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B821E791FF6FF7600469E8E /* TMDbClient.framework */; };
 		8B821E881FF6FF7600469E8E /* TMDbClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B821E871FF6FF7600469E8E /* TMDbClientTests.swift */; };
 		8B821E8A1FF6FF7600469E8E /* TMDbClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B821E7C1FF6FF7600469E8E /* TMDbClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,6 +43,7 @@
 		8B1570101FF705090030950D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		8B1570131FF705480030950D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8B1570171FF70A960030950D /* UpComingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingResponse.swift; sourceTree = "<group>"; };
+		8B1570191FF70E3B0030950D /* UpComingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingDataModel.swift; sourceTree = "<group>"; };
 		8B821E791FF6FF7600469E8E /* TMDbClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDbClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B821E7C1FF6FF7600469E8E /* TMDbClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDbClient.h; sourceTree = "<group>"; };
 		8B821E7D1FF6FF7600469E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				8B15700C1FF704CA0030950D /* GenreDataModel.swift */,
 				8B15700E1FF704E20030950D /* MovieDataModel.swift */,
+				8B1570191FF70E3B0030950D /* UpComingDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				8B1570071FF704410030950D /* GenreResponse.swift in Sources */,
 				8B15700F1FF704E20030950D /* MovieDataModel.swift in Sources */,
 				8B1570141FF705480030950D /* String.swift in Sources */,
+				8B15701A1FF70E3B0030950D /* UpComingDataModel.swift in Sources */,
 				8B821E941FF7007B00469E8E /* MovieApi.swift in Sources */,
 				8B15700D1FF704CA0030950D /* GenreDataModel.swift in Sources */,
 			);

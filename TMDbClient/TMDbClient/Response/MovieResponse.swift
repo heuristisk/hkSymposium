@@ -19,4 +19,3 @@ public class MovieResponse: Mappable {
         result <- map["results"]
     }
 }
-

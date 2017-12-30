@@ -9,7 +9,7 @@
 import ObjectMapper
 
 public class UpComingResponse: Mappable {
-    var result: [MovieDataModel]?
+    var result: [UpComingDataModel]?
 
     public required init?(map: Map) {
 
@@ -19,4 +19,3 @@ public class UpComingResponse: Mappable {
         result <- map["results"]
     }
 }
-

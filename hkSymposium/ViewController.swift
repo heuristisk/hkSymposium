@@ -14,12 +14,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        MovieApi.shared.getGenres { (response) in
-
+        MovieApi.shared.getUpcomingMovies(page: 1) { (response) in
             switch response {
-            case .error:
-                print("")
             case .success(let dataSet):
+                print("")
+            case .error:
                 print("")
             }
         }
