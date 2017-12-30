@@ -30,6 +30,6 @@ public class MovieDataModel: Mappable {
         title <- map["title"]
         overview <- map["overview"]
         posterPath <- map["poster_path"]
-        releaseDate <- map["release_date"]
+        releaseDate <- (map["release_date"], DateConverter())
     }
 }
