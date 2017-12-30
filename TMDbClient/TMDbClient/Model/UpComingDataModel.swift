@@ -37,7 +37,7 @@ public class UpComingDataModel: Mappable {
         title <- map["title"]
         popularity <- map["popularity"]
         posterPath <- map["poster_path"]
-        releaseDate <- map["release_date"]
+        releaseDate <- (map["release_date"], DateConverter())
         overview <- map["overview"]
     }
 }
