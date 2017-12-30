@@ -146,6 +146,7 @@
 				CE29ED41CA50D2F48F6F6A7E /* [CP] Embed Pods Frameworks */,
 				84E2050C37AFE6903235CDD8 /* [CP] Copy Pods Resources */,
 				8BD176B31FF6FB4500F17E44 /* Swift Lint Script */,
+				8B15701E1FF7EA1E0030950D /* Auto-Incrementing Build Numbers */,
 			);
 			buildRules = (
 			);
@@ -294,6 +295,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hkSymposium/Pods-hkSymposium-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8B15701E1FF7EA1E0030950D /* Auto-Incrementing Build Numbers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Auto-Incrementing Build Numbers";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
 		8BD176B31FF6FB4500F17E44 /* Swift Lint Script */ = {
 			isa = PBXShellScriptBuildPhase;
