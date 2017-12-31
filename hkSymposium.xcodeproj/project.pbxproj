@@ -14,7 +14,6 @@
 		8B02D9051FF6F91B004AB26B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B02D9041FF6F91B004AB26B /* Assets.xcassets */; };
 		8B02D9081FF6F91B004AB26B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B02D9061FF6F91B004AB26B /* LaunchScreen.storyboard */; };
 		8B02D9131FF6F91B004AB26B /* AllhkSymposiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02D9121FF6F91B004AB26B /* AllhkSymposiumTests.swift */; };
-		8B1570151FF706030030950D /* TMDbClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1570161FF706030030950D /* TMDbClient.framework */; };
 		8B1570211FF84F400030950D /* MovieCollectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1570201FF84F400030950D /* MovieCollectionDatasource.swift */; };
 		8B1570281FF851E90030950D /* MovieSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1570271FF851E90030950D /* MovieSetupProtocol.swift */; };
 		8B15702A1FF852140030950D /* MovieDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1570291FF852140030950D /* MovieDataProtocol.swift */; };
@@ -27,6 +26,9 @@
 		8B15703F1FF877A80030950D /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B15703E1FF877A80030950D /* MovieViewModel.swift */; };
 		8BA7F2961FF954F600484EB4 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7F2951FF954F600484EB4 /* MovieDetailViewController.swift */; };
 		8BA7F2981FF956BB00484EB4 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7F2971FF956BB00484EB4 /* Destination.swift */; };
+		8BA7F2991FF958F300484EB4 /* TMDbClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1570161FF706030030950D /* TMDbClient.framework */; };
+		8BA7F29A1FF958F300484EB4 /* TMDbClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1570161FF706030030950D /* TMDbClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8BA7F29D1FF9723C00484EB4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7F29C1FF9723C00484EB4 /* Date.swift */; };
 		970DFCA06EAADE925AAA8976 /* Pods_hkSymposiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AC8DBD4A9AA8742F80CDC9 /* Pods_hkSymposiumTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,20 @@
 			remoteInfo = hkSymposium;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BA7F29B1FF958F400484EB4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8BA7F29A1FF958F300484EB4 /* TMDbClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		019FC6F6D5DFFDA756405F03 /* Pods_hkSymposium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hkSymposium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +82,7 @@
 		8B15703E1FF877A80030950D /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		8BA7F2951FF954F600484EB4 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		8BA7F2971FF956BB00484EB4 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		8BA7F29C1FF9723C00484EB4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9FD9AA4D94B56F68D52C432F /* Pods-hkSymposium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hkSymposium.release.xcconfig"; path = "Pods/Target Support Files/Pods-hkSymposium/Pods-hkSymposium.release.xcconfig"; sourceTree = "<group>"; };
 		BE5E63281F0F76BE7BC71CB6 /* Pods-hkSymposiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hkSymposiumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hkSymposiumTests/Pods-hkSymposiumTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3B673AEF41594AFC2387EB4 /* Pods-hkSymposiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hkSymposiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hkSymposiumTests/Pods-hkSymposiumTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B1570151FF706030030950D /* TMDbClient.framework in Frameworks */,
+				8BA7F2991FF958F300484EB4 /* TMDbClient.framework in Frameworks */,
 				3361B0A75C36691D0FA80247 /* Pods_hkSymposium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +243,7 @@
 			children = (
 				8B1570341FF857B80030950D /* UICollectionView.swift */,
 				8BA7F2971FF956BB00484EB4 /* Destination.swift */,
+				8BA7F29C1FF9723C00484EB4 /* Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -271,6 +289,7 @@
 				84E2050C37AFE6903235CDD8 /* [CP] Copy Pods Resources */,
 				8BD176B31FF6FB4500F17E44 /* Swift Lint Script */,
 				8B15701E1FF7EA1E0030950D /* Auto-Incrementing Build Numbers */,
+				8BA7F29B1FF958F400484EB4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -526,6 +545,7 @@
 				8B1570391FF85C410030950D /* Movie.swift in Sources */,
 				8B15702A1FF852140030950D /* MovieDataProtocol.swift in Sources */,
 				8B15703B1FF86B0E0030950D /* MovieCollectionDatasourceDelegate.swift in Sources */,
+				8BA7F29D1FF9723C00484EB4 /* Date.swift in Sources */,
 				8B1570211FF84F400030950D /* MovieCollectionDatasource.swift in Sources */,
 				8B15703F1FF877A80030950D /* MovieViewModel.swift in Sources */,
 				8B1570351FF857B80030950D /* UICollectionView.swift in Sources */,
