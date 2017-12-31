@@ -18,8 +18,20 @@ class MovieViewModel: NSObject {
         return self.moviesList[indexPath.row].title
     }
 
+    func getMovieVoteAverage(for indexPath: IndexPath) -> Double {
+        return self.moviesList[indexPath.row].voteAverage
+    }
+
+    func getMovieReleaseDate(for indexPath: IndexPath) -> Date {
+        return self.moviesList[indexPath.row].releaseDate
+    }
+
     func getMovieImageUrl(for indexPath: IndexPath) -> String {
         return self.moviesList[indexPath.row].imageUrl
+    }
+
+    func getMovieOverview(for indexPath: IndexPath) -> String {
+        return self.moviesList[indexPath.row].overview
     }
 
     func getNumberOfItems() -> Int {

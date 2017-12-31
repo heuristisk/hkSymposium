@@ -54,6 +54,17 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movie = Movie()
+        movie.title = movieViewModel.getMovieTitle(for: indexPath)
+        movie.urlImage = movieViewModel.getMovieImageUrl(for: indexPath)
+        movie.releaseDate = movieViewModel.getMovieReleaseDate(for: indexPath)
+        movie.overview = movieViewModel.getMovieOverview(for: indexPath)
+        movie.voteAverage = movieViewModel.getMovieVoteAverage(for: indexPath)
+
+        delegate?.onDidTapOnMovie(movie: movie)
+    }
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {

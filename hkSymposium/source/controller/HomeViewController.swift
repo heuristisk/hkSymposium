@@ -39,7 +39,15 @@ MovieCollectionDatasourceDelegate {
     }
 
     func onDidTapOnMovie(movie: Movie) {
+        self.performSegue(withIdentifier: Destination.MovieDetailView, sender: movie)
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Destination.MovieDetailView {
+            if let movie = sender as? Movie, let controller = segue.destination as? MovieDetailViewController {
+                controller.movie = movie
+            }
+        }
     }
 
     private func setupUI() {

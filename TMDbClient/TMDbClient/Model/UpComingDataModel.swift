@@ -15,7 +15,7 @@ public class UpComingDataModel: Mappable {
     public var video: Bool = false
     public var voteAverage: Double = 0.0
     public var title: String = String.Empty
-    public var popularity: String = String.Empty
+    public var popularity: Double = 0.0
     private var posterPath: String  = String.Empty {
         didSet {
             if posterPath == String.Empty {

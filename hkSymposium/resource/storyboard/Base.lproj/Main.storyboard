@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,11 +29,27 @@
                     <navigationItem key="navigationItem" title="Upcoming Movies" id="yOo-43-Yv1"/>
                     <connections>
                         <outlet property="collectionView" destination="BhR-5x-yN8" id="6FF-ct-t8S"/>
+                        <segue destination="87J-hU-i48" kind="show" identifier="goToDetailView" id="H9t-Zm-3OX"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIA-bb-vir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="344.80000000000001" y="-2.2488755622188905"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="57i-93-dru">
+            <objects>
+                <viewController id="87J-hU-i48" customClass="MovieDetailViewController" customModule="hkSymposium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jh0-lu-Fvd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="plS-4f-tgo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dul-b5-gxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ir0-o2-QLo">

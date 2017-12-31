@@ -25,6 +25,8 @@
 		8B1570391FF85C410030950D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1570381FF85C410030950D /* Movie.swift */; };
 		8B15703B1FF86B0E0030950D /* MovieCollectionDatasourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B15703A1FF86B0E0030950D /* MovieCollectionDatasourceDelegate.swift */; };
 		8B15703F1FF877A80030950D /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B15703E1FF877A80030950D /* MovieViewModel.swift */; };
+		8BA7F2961FF954F600484EB4 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7F2951FF954F600484EB4 /* MovieDetailViewController.swift */; };
+		8BA7F2981FF956BB00484EB4 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7F2971FF956BB00484EB4 /* Destination.swift */; };
 		970DFCA06EAADE925AAA8976 /* Pods_hkSymposiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AC8DBD4A9AA8742F80CDC9 /* Pods_hkSymposiumTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		8B1570381FF85C410030950D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8B15703A1FF86B0E0030950D /* MovieCollectionDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionDatasourceDelegate.swift; sourceTree = "<group>"; };
 		8B15703E1FF877A80030950D /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		8BA7F2951FF954F600484EB4 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		8BA7F2971FF956BB00484EB4 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		9FD9AA4D94B56F68D52C432F /* Pods-hkSymposium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hkSymposium.release.xcconfig"; path = "Pods/Target Support Files/Pods-hkSymposium/Pods-hkSymposium.release.xcconfig"; sourceTree = "<group>"; };
 		BE5E63281F0F76BE7BC71CB6 /* Pods-hkSymposiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hkSymposiumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hkSymposiumTests/Pods-hkSymposiumTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3B673AEF41594AFC2387EB4 /* Pods-hkSymposiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hkSymposiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hkSymposiumTests/Pods-hkSymposiumTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				8B02D8FF1FF6F91B004AB26B /* HomeViewController.swift */,
+				8BA7F2951FF954F600484EB4 /* MovieDetailViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				8B1570341FF857B80030950D /* UICollectionView.swift */,
+				8BA7F2971FF956BB00484EB4 /* Destination.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -514,6 +520,8 @@
 				8B15702C1FF8527D0030950D /* Reusable.swift in Sources */,
 				8B02D9001FF6F91B004AB26B /* HomeViewController.swift in Sources */,
 				8B02D8FE1FF6F91B004AB26B /* AppDelegate.swift in Sources */,
+				8BA7F2981FF956BB00484EB4 /* Destination.swift in Sources */,
+				8BA7F2961FF954F600484EB4 /* MovieDetailViewController.swift in Sources */,
 				8B1570281FF851E90030950D /* MovieSetupProtocol.swift in Sources */,
 				8B1570391FF85C410030950D /* Movie.swift in Sources */,
 				8B15702A1FF852140030950D /* MovieDataProtocol.swift in Sources */,
