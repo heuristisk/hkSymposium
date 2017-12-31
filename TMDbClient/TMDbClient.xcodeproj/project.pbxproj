@@ -18,7 +18,6 @@
 		8B15701A1FF70E3B0030950D /* UpComingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1570191FF70E3B0030950D /* UpComingDataModel.swift */; };
 		8B15701D1FF7E3DB0030950D /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B15701C1FF7E3DB0030950D /* DateConverter.swift */; };
 		8B821E831FF6FF7600469E8E /* TMDbClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B821E791FF6FF7600469E8E /* TMDbClient.framework */; };
-		8B821E881FF6FF7600469E8E /* TMDbClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B821E871FF6FF7600469E8E /* TMDbClientTests.swift */; };
 		8B821E8A1FF6FF7600469E8E /* TMDbClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B821E7C1FF6FF7600469E8E /* TMDbClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B821E941FF7007B00469E8E /* MovieApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B821E931FF7007B00469E8E /* MovieApi.swift */; };
 /* End PBXBuildFile section */
@@ -50,8 +49,6 @@
 		8B821E7C1FF6FF7600469E8E /* TMDbClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDbClient.h; sourceTree = "<group>"; };
 		8B821E7D1FF6FF7600469E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B821E821FF6FF7600469E8E /* TMDbClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDbClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B821E871FF6FF7600469E8E /* TMDbClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDbClientTests.swift; sourceTree = "<group>"; };
-		8B821E891FF6FF7600469E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B821E931FF7007B00469E8E /* MovieApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				8B821E7B1FF6FF7600469E8E /* TMDbClient */,
-				8B821E861FF6FF7600469E8E /* TMDbClientTests */,
 				8B821E7A1FF6FF7600469E8E /* Products */,
 				17F25E47548F21D089381992 /* Pods */,
 				24A11DA05D32C913EBEDF1B3 /* Frameworks */,
@@ -161,15 +157,6 @@
 				8B1570101FF705090030950D /* Settings.swift */,
 			);
 			path = TMDbClient;
-			sourceTree = "<group>";
-		};
-		8B821E861FF6FF7600469E8E /* TMDbClientTests */ = {
-			isa = PBXGroup;
-			children = (
-				8B821E871FF6FF7600469E8E /* TMDbClientTests.swift */,
-				8B821E891FF6FF7600469E8E /* Info.plist */,
-			);
-			path = TMDbClientTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,7 +325,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B821E881FF6FF7600469E8E /* TMDbClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
