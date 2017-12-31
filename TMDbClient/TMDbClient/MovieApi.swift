@@ -36,7 +36,6 @@ public class MovieApi {
     }
 
     public func getGenres(callback: @escaping GenreResponseCallback) {
-
         let path = "genre/movie/list"
         self.requester(path: getUrl(path), callback: callback)
     }
@@ -47,7 +46,6 @@ public class MovieApi {
     }
 
     public func getUpcomingMovies(page: Int = 1, callback: @escaping UpcomingMovieResponseCallback) {
-
         let path = String("movie/upcoming")
         self.requester(path: String("\(getUrl(path))&page=\(page)"), callback: callback)
     }
