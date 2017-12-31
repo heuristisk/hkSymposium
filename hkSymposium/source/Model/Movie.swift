@@ -9,6 +9,6 @@
 import Foundation
 
 class Movie: MovieDataProtocol {
-    var title: String = ""
-    var urlImage: String = ""
+    var title: String = String.Empty
+    var urlImage: String = String.Empty
 }

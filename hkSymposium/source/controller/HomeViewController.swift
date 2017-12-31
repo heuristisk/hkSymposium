@@ -21,26 +21,21 @@ MovieCollectionDatasourceDelegate {
         setupUI()
     }
 
-    private func displayLoader() {
-        let size = CGSize(width: 30, height: 30)
-
-        startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 10)!)
-
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-            NVActivityIndicatorPresenter.sharedInstance.setMessage("Authenticating...")
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            self.stopAnimating()
-        }
-    }
-
     func onDidStartConnection() {
-        displayLoader()
+        let size = CGSize(width: 60, height: 60)
+        startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 10)!)
     }
 
     func onDidFinishedConnection(hasError: Bool) {
+        if self.collectionView?.dataSource == nil &&
+                                self.collectionView?.delegate == nil &&
+                                hasError == false {
+            self.collectionView?.dataSource = self.collectionViewSource
+            self.collectionView?.delegate = self.collectionViewSource
+        }
 
+        self.collectionView?.reloadData()
+        self.stopAnimating()
     }
 
     func onDidTapOnMovie(movie: Movie) {
@@ -50,7 +45,7 @@ MovieCollectionDatasourceDelegate {
     private func setupUI() {
         self.collectionViewSource = MovieCollectionDatasource(collectionView: self.collectionView ?? UICollectionView(),
             delegate: self)
-        self.collectionView?.dataSource = self.collectionViewSource
-        self.collectionView?.delegate = self.collectionViewSource
+        self.collectionView?.dataSource = nil
+        self.collectionView?.delegate = nil
     }
 }

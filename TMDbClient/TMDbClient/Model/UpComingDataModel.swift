@@ -10,20 +10,20 @@ import ObjectMapper
 
 public class UpComingDataModel: Mappable {
     // swiftlint:disable:next identifier_name
-    var id: Int = -1
-    var voteCount: Int = -1
-    var video: Bool = false
-    var voteAverage: Double = 0.0
-    var title: String = String.Empty
-    var popularity: String = String.Empty
+    public var id: Int = -1
+    public var voteCount: Int = -1
+    public var video: Bool = false
+    public var voteAverage: Double = 0.0
+    public var title: String = String.Empty
+    public var popularity: String = String.Empty
     private var posterPath: String  = String.Empty {
         didSet {
             imageUrl = String("\(Settings.urlImage)\(posterPath)")
         }
     }
-    var imageUrl: String = String.Empty
-    var releaseDate: Date = Date()
-    var overview: String = String.Empty
+    public var imageUrl: String = String.Empty
+    public var releaseDate: Date = Date()
+    public var overview: String = String.Empty
 
     public required init?(map: Map) {
 

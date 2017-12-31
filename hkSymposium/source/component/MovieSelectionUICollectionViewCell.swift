@@ -8,10 +8,20 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class MovieSelectionUICollectionViewCell: UICollectionViewCell, Reusable, MovieSetupProtocol {
 
+    @IBOutlet weak var backgroundImage: UIImageView!
+
     func setup(model: MovieDataProtocol) {
+
+        self.backgroundImage.kf.indicatorType = .activity
+        self.backgroundImage.kf.setImage(with: URL(string: model.urlImage),
+                                 placeholder: nil,
+                                 options: nil,
+                                 progressBlock: nil,
+                                 completionHandler: nil)
 
     }
 }

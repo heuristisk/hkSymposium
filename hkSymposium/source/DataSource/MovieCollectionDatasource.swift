@@ -15,25 +15,22 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
     UICollectionViewDelegateFlowLayout where Cell: Reusable, Cell: MovieSetupProtocol {
 
     var collectionView: UICollectionView
-    var data: [MovieDataProtocol]
     weak var delegate: MovieCollectionDatasourceDelegate?
+    private var movieViewModel = MovieViewModel()
 
     init(collectionView: UICollectionView, delegate: MovieCollectionDatasourceDelegate) {
         self.delegate = delegate
         self.collectionView = collectionView
-        self.data = [Movie(),
-                     Movie(),
-                     Movie(),
-                     Movie(),
-                     Movie(),
-                     Movie(),
-                     Movie(),
-                     Movie(),
-                     Movie(),
-                     Movie()]
-
         super.init()
         self.register()
+        loadData()
+    }
+
+    private func loadData() {
+        delegate?.onDidStartConnection()
+        movieViewModel.load { (hasError) in
+            self.delegate?.onDidFinishedConnection(hasError: hasError)
+        }
     }
 
     private func register() {
@@ -42,13 +39,17 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return movieViewModel.getNumberOfItems()
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: Cell = collectionView.dequeueReusableCell(indexPath: indexPath)
-        cell.setup(model: data[indexPath.row])
+
+        let movie = Movie()
+        movie.title = movieViewModel.getMovieTitle(for: indexPath)
+        movie.urlImage = movieViewModel.getMovieImageUrl(for: indexPath)
+        cell.setup(model: movie)
 
         return cell
     }
@@ -56,7 +57,7 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
         if bottomEdge >= scrollView.contentSize.height {
-            self.delegate?.onDidStartConnection()
+            self.loadData()
         }
     }
 }

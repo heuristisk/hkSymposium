@@ -8,6 +8,6 @@
 
 import Foundation
 
-internal extension String {
-    static var Empty = ""
+public extension String {
+    public static var Empty = ""
 }

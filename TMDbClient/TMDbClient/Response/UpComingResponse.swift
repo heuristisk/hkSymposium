@@ -9,7 +9,7 @@
 import ObjectMapper
 
 public class UpComingResponse: Mappable {
-    var result: [UpComingDataModel]?
+    public var result: [UpComingDataModel]?
 
     public required init?(map: Map) {
 

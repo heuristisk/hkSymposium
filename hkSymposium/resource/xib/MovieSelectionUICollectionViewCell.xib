@@ -18,11 +18,27 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                 <rect key="frame" x="0.0" y="0.0" width="350" height="545"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageSample" translatesAutoresizingMaskIntoConstraints="NO" id="ZYw-vf-hvp">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="545"/>
+                    </imageView>
+                </subviews>
             </view>
-            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ZYw-vf-hvp" secondAttribute="bottom" id="JWb-RL-vcv"/>
+                <constraint firstItem="ZYw-vf-hvp" firstAttribute="top" secondItem="feq-aL-33a" secondAttribute="top" id="PhL-S7-URf"/>
+                <constraint firstItem="ZYw-vf-hvp" firstAttribute="leading" secondItem="feq-aL-33a" secondAttribute="leading" id="h2r-9r-efw"/>
+                <constraint firstAttribute="trailing" secondItem="ZYw-vf-hvp" secondAttribute="trailing" id="uje-n7-DGi"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Fvd-vm-cgn"/>
             <size key="customSize" width="350" height="545"/>
+            <connections>
+                <outlet property="backgroundImage" destination="ZYw-vf-hvp" id="tQp-7m-sZt"/>
+            </connections>
             <point key="canvasLocation" x="58" y="184.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="ImageSample" width="250" height="370"/>
+    </resources>
 </document>
