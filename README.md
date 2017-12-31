@@ -8,7 +8,7 @@ It is a demo project for evaluation purposes. It is an app for cinephiles and mo
 
 ### Navigation animation
 
-![Screenshot image](https://github.com/heuristisk/hkSymposium/blob/development/hkSymposium/resource/screenshots/presentation.gif?raw=true)
+![Screenshot image](https://github.com/heuristisk/hkSymposium/blob/development/hkSymposium/resource/screenshots/presentation.gif)
 
 ### Architecture definitions and design patterns
 
@@ -21,7 +21,11 @@ It is a demo project for evaluation purposes. It is an app for cinephiles and mo
 **com.heuristisk.TMDbClient**  In order to decouple the networking logic from the project, it was built a framework. There are some PODS to get data from TMDb, I preferred to build my own to demonstrate how to consume data from remote API.
  
 
+### Unit tests
 
+Foram escritos teste unitários para garantir integridade de funcionamento das principais funções e cobertura de **79,46%** do código, tanto quanto testar cenários alternativos e provocar situação de erros para avaliar como o código se comporta em tais condições.
+
+![Screenshot image](https://gitlab.com/anderson.gusmao/evaluation/raw/master/fastshop/resources/markdown/coverage.png)
 
 
 
