@@ -9,7 +9,6 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.1.1)
   - ObjectMapper (3.1.0)
   - SwiftLint (0.24.0)
-  - UIImageColors (1.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
@@ -17,7 +16,6 @@ DEPENDENCIES:
   - Kingfisher (~> 4.0)
   - NVActivityIndicatorView
   - SwiftLint
-  - UIImageColors
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -26,8 +24,7 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
-  UIImageColors: 1f891e1a3224efebb01ad476df3a5aed4220ee24
 
-PODFILE CHECKSUM: e547d8e9f37725b48067d283b295592f0d1e35f5
+PODFILE CHECKSUM: 2e4201f464037273079e0b462107b84ee146e122
 
 COCOAPODS: 1.4.0.beta.2
