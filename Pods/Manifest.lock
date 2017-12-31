@@ -4,6 +4,9 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
   - Kingfisher (4.6.1)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
   - ObjectMapper (3.1.0)
   - SwiftLint (0.24.0)
 
@@ -11,15 +14,17 @@ DEPENDENCIES:
   - Alamofire (~> 4.5)
   - AlamofireObjectMapper (~> 5.0)
   - Kingfisher (~> 4.0)
+  - NVActivityIndicatorView
   - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
 
-PODFILE CHECKSUM: 45e66967ba7649c520b922708734802f69ec75c0
+PODFILE CHECKSUM: 2e4201f464037273079e0b462107b84ee146e122
 
 COCOAPODS: 1.4.0.beta.2

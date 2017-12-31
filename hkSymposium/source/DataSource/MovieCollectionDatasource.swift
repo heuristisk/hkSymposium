@@ -16,8 +16,10 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
 
     var collectionView: UICollectionView
     var data: [MovieDataProtocol]
+    weak var delegate: MovieCollectionDatasourceDelegate?
 
-    init(collectionView: UICollectionView) {
+    init(collectionView: UICollectionView, delegate: MovieCollectionDatasourceDelegate) {
+        self.delegate = delegate
         self.collectionView = collectionView
         self.data = [Movie(),
                      Movie(),
@@ -49,5 +51,12 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
         cell.setup(model: data[indexPath.row])
 
         return cell
+    }
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
+        if bottomEdge >= scrollView.contentSize.height {
+            self.delegate?.onDidStartConnection()
+        }
     }
 }
