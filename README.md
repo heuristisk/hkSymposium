@@ -8,7 +8,7 @@ It is a demo project for evaluation purposes. It is an app for cinephiles and mo
 
 ### Navigation animation
 
-![Screenshot image](https://github.com/heuristisk/hkSymposium/blob/development/hkSymposium/resource/screenshots/presentation.gif)
+-[Screenshot image](https://github.com/heuristisk/hkSymposium/blob/development/hkSymposium/resource/screenshots/presentation.gif)
 
 ### Architecture definitions and design patterns
 
