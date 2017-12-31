@@ -54,9 +54,19 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        let realCotentAreaWidth = UIScreen.main.bounds.width - 6
+        let collectionViewSize = realCotentAreaWidth
+
+        return CGSize(width: collectionViewSize/2, height: collectionViewSize * 0.8)
+    }
+
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
-        if bottomEdge >= scrollView.contentSize.height {
+        if bottomEdge >= scrollView.contentSize.height - 1 {
             self.loadData()
         }
     }

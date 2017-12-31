@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,18 +27,42 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageSample" translatesAutoresizingMaskIntoConstraints="NO" id="ZYw-vf-hvp">
                         <rect key="frame" x="0.0" y="0.0" width="350" height="545"/>
                     </imageView>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbv-QR-jHL">
+                        <rect key="frame" x="0.0" y="455" width="350" height="90"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COCO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89K-1y-HaB">
+                                <rect key="frame" x="4" y="4" width="342" height="82"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.6998073630136985" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="89K-1y-HaB" firstAttribute="leading" secondItem="Wbv-QR-jHL" secondAttribute="leading" constant="4" id="CI2-Kx-c8D"/>
+                            <constraint firstItem="89K-1y-HaB" firstAttribute="top" secondItem="Wbv-QR-jHL" secondAttribute="top" constant="4" id="K9p-iK-Qwz"/>
+                            <constraint firstAttribute="trailing" secondItem="89K-1y-HaB" secondAttribute="trailing" constant="4" id="c0M-1i-XCk"/>
+                            <constraint firstAttribute="height" constant="90" id="f2t-KN-n08"/>
+                            <constraint firstAttribute="bottom" secondItem="89K-1y-HaB" secondAttribute="bottom" constant="4" id="m4s-SL-1Lm"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Wbv-QR-jHL" secondAttribute="trailing" id="B5w-r7-dpX"/>
+                <constraint firstItem="Wbv-QR-jHL" firstAttribute="leading" secondItem="feq-aL-33a" secondAttribute="leading" id="ElW-g9-pO5"/>
                 <constraint firstAttribute="bottom" secondItem="ZYw-vf-hvp" secondAttribute="bottom" id="JWb-RL-vcv"/>
                 <constraint firstItem="ZYw-vf-hvp" firstAttribute="top" secondItem="feq-aL-33a" secondAttribute="top" id="PhL-S7-URf"/>
                 <constraint firstItem="ZYw-vf-hvp" firstAttribute="leading" secondItem="feq-aL-33a" secondAttribute="leading" id="h2r-9r-efw"/>
+                <constraint firstAttribute="bottom" secondItem="Wbv-QR-jHL" secondAttribute="bottom" id="sru-Ar-JgG"/>
                 <constraint firstAttribute="trailing" secondItem="ZYw-vf-hvp" secondAttribute="trailing" id="uje-n7-DGi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Fvd-vm-cgn"/>
             <size key="customSize" width="350" height="545"/>
             <connections>
                 <outlet property="backgroundImage" destination="ZYw-vf-hvp" id="tQp-7m-sZt"/>
+                <outlet property="bottomView" destination="Wbv-QR-jHL" id="f8Z-hU-xqG"/>
+                <outlet property="labelTitle" destination="89K-1y-HaB" id="GCp-FG-aiI"/>
             </connections>
             <point key="canvasLocation" x="58" y="184.5"/>
         </collectionViewCell>

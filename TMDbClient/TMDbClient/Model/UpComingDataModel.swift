@@ -18,7 +18,11 @@ public class UpComingDataModel: Mappable {
     public var popularity: String = String.Empty
     private var posterPath: String  = String.Empty {
         didSet {
-            imageUrl = String("\(Settings.urlImage)\(posterPath)")
+            if posterPath == String.Empty {
+                imageUrl = String.Empty
+            } else {
+                imageUrl = String("\(Settings.urlImage)\(posterPath)")
+            }
         }
     }
     public var imageUrl: String = String.Empty

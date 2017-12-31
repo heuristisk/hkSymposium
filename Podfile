@@ -6,6 +6,7 @@ def common_pods
     pod 'SwiftLint'
     pod 'NVActivityIndicatorView'
     pod 'Kingfisher', '~> 4.0'
+    pod 'UIImageColors'
 end
 
 def newtwork_pods
