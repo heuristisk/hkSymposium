@@ -30,6 +30,8 @@
 		8BA7F29A1FF958F300484EB4 /* TMDbClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1570161FF706030030950D /* TMDbClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8BA7F29D1FF9723C00484EB4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7F29C1FF9723C00484EB4 /* Date.swift */; };
 		8BA7F29F1FF97EB400484EB4 /* EmptyStateUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA7F29E1FF97EB400484EB4 /* EmptyStateUIView.xib */; };
+		8BA7F2A21FF98FED00484EB4 /* presentation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8BA7F2A11FF98FED00484EB4 /* presentation.gif */; };
+		8BA7F2A41FF991B000484EB4 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA7F2A31FF991B000484EB4 /* screenshot.png */; };
 		970DFCA06EAADE925AAA8976 /* Pods_hkSymposiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AC8DBD4A9AA8742F80CDC9 /* Pods_hkSymposiumTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,8 @@
 		8BA7F2971FF956BB00484EB4 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		8BA7F29C1FF9723C00484EB4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8BA7F29E1FF97EB400484EB4 /* EmptyStateUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyStateUIView.xib; sourceTree = "<group>"; };
+		8BA7F2A11FF98FED00484EB4 /* presentation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = presentation.gif; sourceTree = "<group>"; };
+		8BA7F2A31FF991B000484EB4 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 		9FD9AA4D94B56F68D52C432F /* Pods-hkSymposium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hkSymposium.release.xcconfig"; path = "Pods/Target Support Files/Pods-hkSymposium/Pods-hkSymposium.release.xcconfig"; sourceTree = "<group>"; };
 		BE5E63281F0F76BE7BC71CB6 /* Pods-hkSymposiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hkSymposiumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hkSymposiumTests/Pods-hkSymposiumTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3B673AEF41594AFC2387EB4 /* Pods-hkSymposiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hkSymposiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hkSymposiumTests/Pods-hkSymposiumTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 		8B1570241FF850ED0030950D /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				8BA7F2A01FF98FD200484EB4 /* screenshots */,
 				8B15702E1FF853450030950D /* xib */,
 				8B15702D1FF8533F0030950D /* storyboard */,
 				8B02D9041FF6F91B004AB26B /* Assets.xcassets */,
@@ -265,6 +270,15 @@
 				8B15703E1FF877A80030950D /* MovieViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8BA7F2A01FF98FD200484EB4 /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				8BA7F2A31FF991B000484EB4 /* screenshot.png */,
+				8BA7F2A11FF98FED00484EB4 /* presentation.gif */,
+			);
+			path = screenshots;
 			sourceTree = "<group>";
 		};
 		E509C27FC42D94B19CD7FD88 /* Frameworks */ = {
@@ -369,10 +383,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA7F2A21FF98FED00484EB4 /* presentation.gif in Resources */,
 				8B02D9081FF6F91B004AB26B /* LaunchScreen.storyboard in Resources */,
 				8BA7F29F1FF97EB400484EB4 /* EmptyStateUIView.xib in Resources */,
 				8B02D9051FF6F91B004AB26B /* Assets.xcassets in Resources */,
 				8B1570301FF853780030950D /* MovieSelectionUICollectionViewCell.xib in Resources */,
+				8BA7F2A41FF991B000484EB4 /* screenshot.png in Resources */,
 				8B02D9031FF6F91B004AB26B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
