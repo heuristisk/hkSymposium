@@ -8,7 +8,7 @@ It is a demo project for evaluation purposes. It is an app for cinephiles and mo
 
 ### Navigation animation
 
--[Screenshot image](https://github.com/heuristisk/hkSymposium/blob/development/hkSymposium/resource/screenshots/presentation.gif)
+![Screenshot image](https://github.com/heuristisk/hkSymposium/blob/development/hkSymposium/resource/screenshots/presentation.gif)
 
 ### Architecture definitions and design patterns
 
@@ -18,14 +18,35 @@ It is a demo project for evaluation purposes. It is an app for cinephiles and mo
 
 **Storyboard** Because the simplicity of this project the Storyboard fits well the needs. For more robust navigation, a new layer could be added to coordinate navigation in a more flexible way.  
 
-**com.heuristisk.TMDbClient**  In order to decouple the networking logic from the project, it was built a framework. There are some PODS to get data from TMDb, I preferred to build my own to demonstrate how to consume data from remote API.
+**com.heuristisk.TMDbClient**  In order to decouple the networking logic from the project, it was built a framework. There are some PODS to get data from TMDb, I preferred to build my own to demonstrate how I am used to consuming data from remote API.
  
 
 ### Unit tests
 
-Foram escritos teste unitários para garantir integridade de funcionamento das principais funções e cobertura de **79,46%** do código, tanto quanto testar cenários alternativos e provocar situação de erros para avaliar como o código se comporta em tais condições.
+For testing the **com.heuristisk.TMDbClient** framework it was written some test cases to coverage *88,79%* of code.
 
-![Screenshot image](https://gitlab.com/anderson.gusmao/evaluation/raw/master/fastshop/resources/markdown/coverage.png)
+![Screenshot image](https://github.com/heuristisk/hkSymposium/blob/development/hkSymposium/resource/screenshots/unit.test.01.png?raw=true)
+
+![Screenshot image](https://github.com/heuristisk/hkSymposium/blob/development/hkSymposium/resource/screenshots/unit.test.02.png?raw=true)
+
+### How to build
+
+Just clone the repository, run **pod install** and open the workspace project and execute the project.
+
+### Dependencies - PODS
+
+* **SwiftLint** - Used to keep the code standardized.
+* **Alamofire** - Used to simplify the networking calls.
+* **AlamofireObjectMapper** - Used to simplify the JSON parsing. 
+* **Kingfisher** - Used to apply cache on download images and loading it asynchronously from the internet. 
+*  **NVActivityIndicatorView** - Used to present a loader screen for improving the user experience.
+
+### Improvements
+
+* Unit testing for 100% of code coverage
+* Layout
+* UI Testing
+* Build settings for some environments such as development, homolog, and production. 
 
 
 
