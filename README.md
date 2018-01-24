@@ -12,7 +12,7 @@ It is a demo project for evaluation purposes. It is an app for cinephiles and mo
 
 ### Architecture definitions and design patterns
 
-**MVVM**  (Model View View Model) It was chosen MVVM instead of standard MVC from Apple because of the understanding that it is more sophisticated to build a software with a higher level of decoupling for increasing testability. 
+**MVVM**  (Model View View Model) It was chosen MVVM instead of standard MVC from Apple because of the understanding that it is more sophisticated to build software with higher level of decoupling for increasing testability. 
 
 **SingleTon** It was applied this pattern to keep a single instance for the client API, in this way the project has a centralized reference to get data from the server.
 
