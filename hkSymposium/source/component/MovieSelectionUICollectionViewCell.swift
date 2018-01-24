@@ -18,12 +18,12 @@ class MovieSelectionUICollectionViewCell: UICollectionViewCell, Reusable, MovieS
 
     func setup(model: MovieDataProtocol) {
         self.labelTitle.text = model.title
-        if model.urlImage != String.Empty {
+        if model.urlImage != String.empty {
             self.backgroundImage.kf.indicatorType = .activity
             self.backgroundImage.kf.setImage(with: URL(string: model.urlImage))
             bottomView.isHidden = true
         } else {
-            self.backgroundImage.image = UIImage(named: "ImageNotFound")
+            self.backgroundImage.image = #imageLiteral(resourceName: "ImageNotFound")
             bottomView.isHidden = false
         }
     }

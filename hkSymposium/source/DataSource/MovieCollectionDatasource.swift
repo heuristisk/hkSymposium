@@ -28,8 +28,8 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
 
     private func loadData() {
         delegate?.onDidStartConnection()
-        movieViewModel.load { (hasError) in
-            self.delegate?.onDidFinishedConnection(hasError: hasError)
+        movieViewModel.load { [weak self] (hasError) in
+            self?.delegate?.onDidFinishedConnection(hasError: hasError)
         }
     }
 
@@ -39,29 +39,19 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return movieViewModel.getNumberOfItems()
+        return movieViewModel.numberOfItems
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: Cell = collectionView.dequeueReusableCell(indexPath: indexPath)
-
-        let movie = Movie()
-        movie.title = movieViewModel.getMovieTitle(for: indexPath)
-        movie.urlImage = movieViewModel.getMovieImageUrl(for: indexPath)
+        let movie = movieViewModel.getMovie(for: indexPath)
         cell.setup(model: movie)
-
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let movie = Movie()
-        movie.title = movieViewModel.getMovieTitle(for: indexPath)
-        movie.urlImage = movieViewModel.getMovieImageUrl(for: indexPath)
-        movie.releaseDate = movieViewModel.getMovieReleaseDate(for: indexPath)
-        movie.overview = movieViewModel.getMovieOverview(for: indexPath)
-        movie.voteAverage = movieViewModel.getMovieVoteAverage(for: indexPath)
-
+        let movie = movieViewModel.getMovie(for: indexPath)
         delegate?.onDidTapOnMovie(movie: movie)
     }
 
@@ -71,7 +61,6 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
 
         let realCotentAreaWidth = UIScreen.main.bounds.width - 6
         let collectionViewSize = realCotentAreaWidth
-
         return CGSize(width: collectionViewSize/2, height: collectionViewSize * 0.8)
     }
 

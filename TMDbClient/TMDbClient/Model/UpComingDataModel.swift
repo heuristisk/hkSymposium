@@ -14,20 +14,20 @@ public class UpComingDataModel: Mappable {
     public var voteCount: Int = -1
     public var video: Bool = false
     public var voteAverage: Double = 0.0
-    public var title: String = String.Empty
+    public var title: String = String.empty
     public var popularity: Double = 0.0
-    private var posterPath: String  = String.Empty {
+    private var posterPath: String  = String.empty {
         didSet {
-            if posterPath == String.Empty {
-                imageUrl = String.Empty
+            if posterPath.isEmpty {
+                imageUrl = String.empty
             } else {
                 imageUrl = String("\(Settings.urlImage)\(posterPath)")
             }
         }
     }
-    public var imageUrl: String = String.Empty
+    public var imageUrl: String = String.empty
     public var releaseDate: Date = Date()
-    public var overview: String = String.Empty
+    public var overview: String = String.empty
 
     public required init?(map: Map) {
 

@@ -16,7 +16,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelReleaseDate: UILabel!
     @IBOutlet weak var labelOverview: UILabel!
-    var movie: Movie!
+    var movie: Movie?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,16 +25,21 @@ class MovieDetailViewController: UIViewController {
     }
 
     private func setupUI() {
-        if movie.urlImage != String.Empty {
+
+        guard let movie = movie else {
+            return
+        }
+
+        if movie.urlImage != String.empty {
             self.posterImageView.kf.indicatorType = .activity
             self.posterImageView.kf.setImage(with: URL(string: movie.urlImage))
         } else {
-            self.posterImageView.image = UIImage(named: "ImageNotFound")
+            self.posterImageView.image = #imageLiteral(resourceName: "ImageNotFound")
         }
 
-        self.voteAverageProgressBar.setProgress(Float(self.movie.voteAverage / 10), animated: true)
+        self.voteAverageProgressBar.setProgress(Float(movie.voteAverage / 10), animated: true)
         self.labelOverview.text = movie.overview
         self.labelTitle.text = movie.title
-        self.labelReleaseDate.text = (movie.releaseDate?.toString()) ?? String.Empty
+        self.labelReleaseDate.text = (movie.releaseDate?.toString) ?? String.empty
     }
 }

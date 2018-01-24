@@ -9,7 +9,8 @@
 import Foundation
 
 extension Date {
-    func toString() -> String {
+
+    var toString: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         return  dateFormatter.string(from: self)

@@ -17,11 +17,15 @@ class DateConverter: TransformType {
     func transformFromJSON(_ value: Any?) -> Object? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.date(from: String(describing: value ?? String.Empty))
+        return dateFormatter.date(from: String(describing: value ?? String.empty))
     }
 
     func transformToJSON(_ value: Object?) -> JSON? {
-        let date: Date = value!
+
+        guard let date = value else {
+            return nil
+        }
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return  dateFormatter.string(from: date)

@@ -11,7 +11,7 @@ import ObjectMapper
 public class GenreDataModel: Mappable {
     // swiftlint:disable:next identifier_name
     var id: Int = -1
-    var name: String = String.Empty
+    var name: String = String.empty
 
     public required init?(map: Map) {
 

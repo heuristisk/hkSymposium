@@ -40,7 +40,7 @@ class AllhkSymposiumTests: XCTestCase {
 
         waitForExpectations(timeout: 5.0) { (error) in
             if error != nil {
-                XCTFail((error?.localizedDescription) ?? String.Empty)
+                XCTFail((error?.localizedDescription) ?? String.empty)
             }
         }
     }
@@ -61,7 +61,7 @@ class AllhkSymposiumTests: XCTestCase {
 
         waitForExpectations(timeout: 5.0) { (error) in
             if error != nil {
-                XCTFail((error?.localizedDescription) ?? String.Empty)
+                XCTFail((error?.localizedDescription) ?? String.empty)
             }
         }
     }
@@ -85,7 +85,7 @@ class AllhkSymposiumTests: XCTestCase {
 
         waitForExpectations(timeout: 5.0) { (error) in
             if error != nil {
-                XCTFail((error?.localizedDescription) ?? String.Empty)
+                XCTFail((error?.localizedDescription) ?? String.empty)
             }
         }
     }
@@ -118,7 +118,7 @@ class AllhkSymposiumTests: XCTestCase {
 
         waitForExpectations(timeout: 5.0) { (error) in
             if error != nil {
-                XCTFail((error?.localizedDescription) ?? String.Empty)
+                XCTFail((error?.localizedDescription) ?? String.empty)
             }
         }
     }

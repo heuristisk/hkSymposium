@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Destination {
-    static var MovieDetailView = "goToDetailView"
+enum Destination: String {
+    case movieDetailView = "goToDetailView"
 }

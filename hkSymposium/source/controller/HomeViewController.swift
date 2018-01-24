@@ -14,6 +14,8 @@ class HomeViewController: UICollectionViewController,
                           NVActivityIndicatorViewable,
 MovieCollectionDatasourceDelegate {
 
+    private let activityIndicatorWidth = 60
+    private let activityIndicatorHeight = 60
     var collectionViewSource: MovieCollectionDatasource<MovieSelectionUICollectionViewCell>!
 
     override func viewDidLoad() {
@@ -22,8 +24,8 @@ MovieCollectionDatasourceDelegate {
     }
 
     func onDidStartConnection() {
-        let size = CGSize(width: 60, height: 60)
-        startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 10)!)
+        let size = CGSize(width: activityIndicatorWidth, height: activityIndicatorHeight)
+        startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 10))
     }
 
     func onDidFinishedConnection(hasError: Bool) {
@@ -44,11 +46,11 @@ MovieCollectionDatasourceDelegate {
     }
 
     func onDidTapOnMovie(movie: Movie) {
-        self.performSegue(withIdentifier: Destination.MovieDetailView, sender: movie)
+        self.performSegue(withIdentifier: Destination.movieDetailView.rawValue, sender: movie)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Destination.MovieDetailView {
+        if segue.identifier == Destination.movieDetailView.rawValue {
             if let movie = sender as? Movie, let controller = segue.destination as? MovieDetailViewController {
                 controller.movie = movie
             }

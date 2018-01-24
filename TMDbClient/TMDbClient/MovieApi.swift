@@ -16,7 +16,7 @@ public class MovieApi {
     public static var shared = MovieApi(apiKey: Settings.apiKey)
 
     private static let address = "\(Settings.apiUrl)\(Settings.apiVersion)/%@?api_key=%@&language=%@"
-    private static var apiKey = String.Empty
+    private static var apiKey = String.empty
 
     public init(apiKey: String) {
         MovieApi.apiKey = apiKey
