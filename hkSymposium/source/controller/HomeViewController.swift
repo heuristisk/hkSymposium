@@ -29,20 +29,22 @@ MovieCollectionDatasourceDelegate {
     }
 
     func onDidFinishedConnection(hasError: Bool) {
-        if self.collectionView?.dataSource == nil &&
-            self.collectionView?.delegate == nil {
-            if hasError == false {
-            self.collectionView?.dataSource = self.collectionViewSource
-            self.collectionView?.delegate = self.collectionViewSource
-            } else {
-                self.collectionView?.backgroundView = Bundle.main.loadNibNamed("EmptyStateUIView",
-                                                                        owner: self,
-                                                                        options: nil)?.first as? UIView
+        DispatchQueue.main.async {
+            if self.collectionView?.dataSource == nil &&
+                self.collectionView?.delegate == nil {
+                if hasError == false {
+                    self.collectionView?.dataSource = self.collectionViewSource
+                    self.collectionView?.delegate = self.collectionViewSource
+                } else {
+                    self.collectionView?.backgroundView = Bundle.main.loadNibNamed("EmptyStateUIView",
+                                                                                   owner: self,
+                                                                                   options: nil)?.first as? UIView
+                }
             }
-        }
 
-        self.collectionView?.reloadData()
-        self.stopAnimating()
+            self.collectionView?.reloadData()
+            self.stopAnimating()
+        }
     }
 
     func onDidTapOnMovie(movie: Movie) {

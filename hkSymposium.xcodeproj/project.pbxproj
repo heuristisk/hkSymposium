@@ -24,6 +24,8 @@
 		8B1570391FF85C410030950D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1570381FF85C410030950D /* Movie.swift */; };
 		8B15703B1FF86B0E0030950D /* MovieCollectionDatasourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B15703A1FF86B0E0030950D /* MovieCollectionDatasourceDelegate.swift */; };
 		8B15703F1FF877A80030950D /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B15703E1FF877A80030950D /* MovieViewModel.swift */; };
+		8B327F8C201E3778004DF737 /* CoverFlowFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B327F8B201E3778004DF737 /* CoverFlowFlowLayout.swift */; };
+		8B327F8E201E4486004DF737 /* CollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B327F8D201E4486004DF737 /* CollectionViewLayoutAttributes.swift */; };
 		8BA7F2961FF954F600484EB4 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7F2951FF954F600484EB4 /* MovieDetailViewController.swift */; };
 		8BA7F2981FF956BB00484EB4 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7F2971FF956BB00484EB4 /* Destination.swift */; };
 		8BA7F2991FF958F300484EB4 /* TMDbClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1570161FF706030030950D /* TMDbClient.framework */; };
@@ -85,6 +87,8 @@
 		8B1570381FF85C410030950D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8B15703A1FF86B0E0030950D /* MovieCollectionDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionDatasourceDelegate.swift; sourceTree = "<group>"; };
 		8B15703E1FF877A80030950D /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		8B327F8B201E3778004DF737 /* CoverFlowFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowFlowLayout.swift; sourceTree = "<group>"; };
+		8B327F8D201E4486004DF737 /* CollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
 		8BA7F2951FF954F600484EB4 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		8BA7F2971FF956BB00484EB4 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		8BA7F29C1FF9723C00484EB4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 			children = (
 				8B15702B1FF8527D0030950D /* Reusable.swift */,
 				8B1570311FF853F50030950D /* MovieSelectionUICollectionViewCell.swift */,
+				8B327F8B201E3778004DF737 /* CoverFlowFlowLayout.swift */,
+				8B327F8D201E4486004DF737 /* CollectionViewLayoutAttributes.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -565,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B15702C1FF8527D0030950D /* Reusable.swift in Sources */,
+				8B327F8C201E3778004DF737 /* CoverFlowFlowLayout.swift in Sources */,
 				8B02D9001FF6F91B004AB26B /* HomeViewController.swift in Sources */,
 				8B02D8FE1FF6F91B004AB26B /* AppDelegate.swift in Sources */,
 				8BA7F2981FF956BB00484EB4 /* Destination.swift in Sources */,
@@ -574,6 +581,7 @@
 				8B15702A1FF852140030950D /* MovieDataProtocol.swift in Sources */,
 				8B15703B1FF86B0E0030950D /* MovieCollectionDatasourceDelegate.swift in Sources */,
 				8BA7F29D1FF9723C00484EB4 /* Date.swift in Sources */,
+				8B327F8E201E4486004DF737 /* CollectionViewLayoutAttributes.swift in Sources */,
 				8B1570211FF84F400030950D /* MovieCollectionDatasource.swift in Sources */,
 				8B15703F1FF877A80030950D /* MovieViewModel.swift in Sources */,
 				8B1570351FF857B80030950D /* UICollectionView.swift in Sources */,

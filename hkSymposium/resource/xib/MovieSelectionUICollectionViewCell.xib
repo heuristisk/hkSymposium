@@ -24,8 +24,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="350" height="545"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageSample" translatesAutoresizingMaskIntoConstraints="NO" id="ZYw-vf-hvp">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="545"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageSample" translatesAutoresizingMaskIntoConstraints="NO" id="ZYw-vf-hvp">
+                        <rect key="frame" x="8" y="8" width="334" height="529"/>
                     </imageView>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbv-QR-jHL">
                         <rect key="frame" x="0.0" y="455" width="350" height="90"/>
@@ -46,16 +46,25 @@
                             <constraint firstAttribute="bottom" secondItem="89K-1y-HaB" secondAttribute="bottom" constant="4" id="m4s-SL-1Lm"/>
                         </constraints>
                     </view>
+                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-Eb-PxQ">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="545"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="rqa-Eb-PxQ" firstAttribute="leading" secondItem="feq-aL-33a" secondAttribute="leading" id="15V-Oq-wbA"/>
                 <constraint firstAttribute="trailing" secondItem="Wbv-QR-jHL" secondAttribute="trailing" id="B5w-r7-dpX"/>
                 <constraint firstItem="Wbv-QR-jHL" firstAttribute="leading" secondItem="feq-aL-33a" secondAttribute="leading" id="ElW-g9-pO5"/>
-                <constraint firstAttribute="bottom" secondItem="ZYw-vf-hvp" secondAttribute="bottom" id="JWb-RL-vcv"/>
-                <constraint firstItem="ZYw-vf-hvp" firstAttribute="top" secondItem="feq-aL-33a" secondAttribute="top" id="PhL-S7-URf"/>
-                <constraint firstItem="ZYw-vf-hvp" firstAttribute="leading" secondItem="feq-aL-33a" secondAttribute="leading" id="h2r-9r-efw"/>
+                <constraint firstAttribute="bottom" secondItem="ZYw-vf-hvp" secondAttribute="bottom" constant="8" id="JWb-RL-vcv"/>
+                <constraint firstItem="ZYw-vf-hvp" firstAttribute="top" secondItem="feq-aL-33a" secondAttribute="top" constant="8" id="PhL-S7-URf"/>
+                <constraint firstAttribute="bottom" secondItem="rqa-Eb-PxQ" secondAttribute="bottom" id="ZdY-eJ-4Kz"/>
+                <constraint firstAttribute="trailing" secondItem="rqa-Eb-PxQ" secondAttribute="trailing" id="b8M-UQ-m1y"/>
+                <constraint firstItem="ZYw-vf-hvp" firstAttribute="leading" secondItem="feq-aL-33a" secondAttribute="leading" constant="8" id="h2r-9r-efw"/>
+                <constraint firstItem="rqa-Eb-PxQ" firstAttribute="top" secondItem="feq-aL-33a" secondAttribute="top" id="mxt-Ei-3Zb"/>
                 <constraint firstAttribute="bottom" secondItem="Wbv-QR-jHL" secondAttribute="bottom" id="sru-Ar-JgG"/>
-                <constraint firstAttribute="trailing" secondItem="ZYw-vf-hvp" secondAttribute="trailing" id="uje-n7-DGi"/>
+                <constraint firstAttribute="trailing" secondItem="ZYw-vf-hvp" secondAttribute="trailing" constant="8" id="uje-n7-DGi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Fvd-vm-cgn"/>
             <size key="customSize" width="350" height="545"/>
@@ -63,6 +72,7 @@
                 <outlet property="backgroundImage" destination="ZYw-vf-hvp" id="tQp-7m-sZt"/>
                 <outlet property="bottomView" destination="Wbv-QR-jHL" id="f8Z-hU-xqG"/>
                 <outlet property="labelTitle" destination="89K-1y-HaB" id="GCp-FG-aiI"/>
+                <outlet property="maskedView" destination="rqa-Eb-PxQ" id="TWv-sw-7eY"/>
             </connections>
             <point key="canvasLocation" x="58" y="184.5"/>
         </collectionViewCell>

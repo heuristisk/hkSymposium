@@ -61,12 +61,27 @@ class MovieCollectionDatasource<Cell: UICollectionViewCell>: NSObject,
 
         let realCotentAreaWidth = UIScreen.main.bounds.width - 6
         let collectionViewSize = realCotentAreaWidth
-        return CGSize(width: collectionViewSize/2, height: collectionViewSize * 0.8)
+        return CGSize(width: collectionViewSize * 0.5, height: UIScreen.main.bounds.height * 0.45)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        if UIApplication.shared.statusBarOrientation == .portrait {
+            return UIEdgeInsets(top: 0, left: 60, bottom: 0, right: 60)
+        } else {
+            if UIScreen.main.bounds.height > 480 {
+                return UIEdgeInsets(top: 0, left: 190, bottom: 0, right: 190)
+            } else {
+                return UIEdgeInsets(top: 0, left: 150, bottom: 0, right: 150)
+            }
+        }
     }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
-        if bottomEdge >= scrollView.contentSize.height - 1 {
+        let bottomEdge = scrollView.contentOffset.x + scrollView.frame.size.width
+        if bottomEdge >= scrollView.contentSize.width {
             self.loadData()
         }
     }
